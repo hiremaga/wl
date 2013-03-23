@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Wl::VERSION
   spec.authors       = ["Abhi Hiremagalur"]
   spec.email         = ["abhijit@hiremaga.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{`wl` is an unofficial Ruby client and command line interface for the truly awesome Wunderlist}
+  spec.summary       = %q{`wl` is an unofficial Ruby client and command line interface for the truly awesome Wunderlist}
+  spec.homepage      = "http://github.com/hiremaga/wl"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

@@ -1,6 +1,6 @@
-# Wl
+# wl
 
-TODO: Write a gem description
+`wl` is an unofficial Ruby client and command line interface for the truly awesome [Wunderlist](http://www.6wunderkinder.com/wunderlist)
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    wl --help
 
 ## Contributing
 
