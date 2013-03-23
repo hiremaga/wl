@@ -1,5 +1,5 @@
 require "wl/version"
 
 module Wl
-  # Your code goes here...
+  autoload :CLI, 'wl/cli'
 end
