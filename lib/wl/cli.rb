@@ -4,10 +4,11 @@ require 'highline'
 module Wl
   class CLI < Thor
     desc 'login', 'Logs in to Wunderlist'
-    option :email,    desc: 'Wunderlist email'
+    option :email, desc: 'Wunderlist email'
     option :password, desc: 'Wunderlist password'
+
     def login
-      email    = options[:email]    || ui.ask('Wunderlist email: ')
+      email = options[:email] || ui.ask('Wunderlist email: ')
       password = options[:password] || ui.ask('Wunderlist password: ') { |q| q.echo = '*' }
 
       client = Wl::Client.new

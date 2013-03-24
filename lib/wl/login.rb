@@ -14,5 +14,6 @@ module Wl
     property :confirmation_state
     property :type
     property :email_confirmed
+    property :errors
   end
 end

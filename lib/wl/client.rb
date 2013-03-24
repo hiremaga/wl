@@ -5,12 +5,7 @@ module Wl
     base_uri 'https://api.wunderlist.com/'
 
     def login(email, password)
-      response = post('login', extra_query: {email: email, password: password}, as: Login)
-      if response.code == 200
-        Login.new(response.parsed_response)
-      else
-        raise response.inspect
-      end
+      post('login', extra_query: {email: email, password: password}, transformer: Login)
     end
   end
 end
