@@ -13,7 +13,10 @@ module Wl
       client = Wl::Client.new
       login = client.login(email, password)
 
-      ui.say login.to_json
+      dotwl = Dotwl.new
+      dotwl.login(login)
+
+      say login.to_json
     end
 
     private

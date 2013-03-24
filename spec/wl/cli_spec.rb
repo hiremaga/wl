@@ -2,7 +2,10 @@ require 'spec_helper'
 
 module Wl
   describe CLI do
+    let(:dotwl) { double(Dotwl).as_null_object }
+
     subject do
+      Dotwl.stub(:new).and_return(dotwl)
       Wl::CLI.start(args)
     end
 
@@ -21,6 +24,11 @@ module Wl
       it 'retrieves a token on behalf of the user' do
         output = capture(:stdout) { subject }
         output.should include('"name":"fake@example.com"')
+      end
+
+      it 'stores the token' do
+        dotwl.should_receive(:login).with(an_instance_of(Login))
+        subject
       end
 
       context 'when an email and password are not provided' do
