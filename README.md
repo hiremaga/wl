@@ -1,5 +1,7 @@
 # wl
 
+[![Build Status](https://secure.travis-ci.org/hiremaga/wl.png)](http://travis-ci.org/hiremaga/wl) [![Code Climate](https://codeclimate.com/github/hiremaga/wl.png)](https://codeclimate.com/github/hiremaga/wl)
+
 `wl` is an unofficial Ruby client and command line interface for the truly awesome [Wunderlist](http://www.6wunderkinder.com/wunderlist)
 
 ## Installation
