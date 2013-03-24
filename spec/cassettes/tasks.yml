@@ -1,0 +1,125 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wunderlist.com/me/tasks?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 131378dbc2490bf87b6080ad6aeb758a46673270bbca9c7ea26f434473bbe741
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 24 Mar 2013 07:31:29 GMT
+      Etag:
+      - ! '"778391fe24fb7fcae2a445c4b3a7982a"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-6w-Client-Status:
+      - unknown
+      X-6w-Timestamp:
+      - '1364110288'
+      X-Rack-Cache:
+      - miss
+      X-Ratelimit-Delay-Hard:
+      - '0'
+      X-Ratelimit-Delay-Soft:
+      - '620'
+      X-Request-Id:
+      - 25225fa3fe737f995481ab2cc5ec4548
+      X-Server:
+      - ip-10-227-29-235
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! "[{\n  \"id\": \"ACIdABLJbhA\",\n  \"created_at\": \"2013-03-24T07:31:24Z\",\n
+        \ \"updated_at\": \"2013-03-24T07:31:24Z\",\n  \"title\": \"Do something you
+        want\",\n  \"starred\": false,\n  \"note\": null,\n  \"completed_at\": null,\n
+        \ \"local_identifier\": \"localId:web:ABcDEFGhIJk:Task:BLAHBLAHBLAHBLAH_01\",\n
+        \ \"recurrence_type\": null,\n  \"recurrence_count\": 0,\n  \"recurring_parent_id\":
+        null,\n  \"due_date\": null,\n  \"parent_id\": null,\n  \"created_by_id\":
+        \"ABcDEFGhIJk\",\n  \"updated_by_id\": \"ABcDEFGhIJk\",\n  \"completed_by_id\":
+        null,\n  \"version\": 1,\n  \"assignee_id\": null,\n  \"type\": \"Task\",\n
+        \ \"user_id\": \"ABcDEFGhIJk\",\n  \"owner_id\": \"ABcDEFGhIJk\",\n  \"position\":
+        20.00006,\n  \"list_id\": \"inbox\",\n  \"deleted_at\": null\n}, {\n  \"id\":
+        \"ACIdABLJbg4\",\n  \"created_at\": \"2013-03-24T07:31:24Z\",\n  \"updated_at\":
+        \"2013-03-24T07:31:24Z\",\n  \"title\": \"Do something productive\",\n  \"starred\":
+        false,\n  \"note\": null,\n  \"completed_at\": null,\n  \"local_identifier\":
+        \"localId:web:ABcDEFGhIJk:Task:BLAHBLAHBLAHBLAH_02\",\n  \"recurrence_type\":
+        null,\n  \"recurrence_count\": 0,\n  \"recurring_parent_id\": null,\n  \"due_date\":
+        null,\n  \"parent_id\": null,\n  \"created_by_id\": \"ABcDEFGhIJk\",\n  \"updated_by_id\":
+        \"ABcDEFGhIJk\",\n  \"completed_by_id\": null,\n  \"version\": 1,\n  \"assignee_id\":
+        null,\n  \"type\": \"Task\",\n  \"user_id\": \"ABcDEFGhIJk\",\n  \"owner_id\":
+        \"ABcDEFGhIJk\",\n  \"position\": 10.00003,\n  \"list_id\": \"inbox\",\n  \"deleted_at\":
+        null\n}, {\n  \"id\": \"ACIdABLJbg0\",\n  \"created_at\": \"2013-03-24T07:31:24Z\",\n
+        \ \"updated_at\": \"2013-03-24T07:31:24Z\",\n  \"title\": \"Do something useful\",\n
+        \ \"starred\": false,\n  \"note\": null,\n  \"completed_at\": null,\n  \"local_identifier\":
+        \"localId:web:ABcDEFGhIJk:Task:lw6d7911b474ef405b27406da031d526\",\n  \"recurrence_type\":
+        null,\n  \"recurrence_count\": 0,\n  \"recurring_parent_id\": null,\n  \"due_date\":
+        null,\n  \"parent_id\": null,\n  \"created_by_id\": \"ABcDEFGhIJk\",\n  \"updated_by_id\":
+        \"ABcDEFGhIJk\",\n  \"completed_by_id\": null,\n  \"version\": 1,\n  \"assignee_id\":
+        null,\n  \"type\": \"Task\",\n  \"user_id\": \"ABcDEFGhIJk\",\n  \"owner_id\":
+        \"ABcDEFGhIJk\",\n  \"position\": 2.0e-05,\n  \"list_id\": \"inbox\",\n  \"deleted_at\":
+        null\n}]\n"
+    http_version: 
+  recorded_at: Sun, 24 Mar 2013 07:31:29 GMT
+- request:
+    method: get
+    uri: https://api.wunderlist.com/me/tasks?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 24 Mar 2013 07:47:46 GMT
+      Server:
+      - nginx
+      Status:
+      - 401 Unauthorized
+      X-6w-Client-Status:
+      - unknown
+      X-6w-Timestamp:
+      - '1364111266'
+      X-Rack-Cache:
+      - miss
+      X-Ratelimit-Delay-Hard:
+      - '0'
+      X-Ratelimit-Delay-Soft:
+      - '755'
+      X-Request-Id:
+      - 251d1dd71af0be5b5359ab58a956c367
+      Content-Length:
+      - '85'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"errors":{"message":"You must be authenticated to continue.","type":"unauthorized"}}'
+    http_version: 
+  recorded_at: Sun, 24 Mar 2013 07:47:46 GMT
+recorded_with: VCR 2.4.0

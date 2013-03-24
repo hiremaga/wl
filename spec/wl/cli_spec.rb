@@ -2,11 +2,14 @@ require 'spec_helper'
 
 module Wl
   describe CLI do
-    let(:dotwl) { double(Dotwl).as_null_object }
+    let(:dotwl) { double(Dotwl, token: nil).as_null_object }
 
     subject do
-      Dotwl.stub(:new).and_return(dotwl)
       Wl::CLI.start(args)
+    end
+
+    before do
+      Dotwl.stub(:new).and_return(dotwl)
     end
 
     context "by default" do
@@ -46,6 +49,20 @@ module Wl
 
           subject
         end
+      end
+    end
+
+    describe 'tasks', vcr: {cassette_name: 'tasks'} do
+      let(:args) { %w"tasks" }
+
+      before do
+        dotwl.stub(token: '131378dbc2490bf87b6080ad6aeb758a46673270bbca9c7ea26f434473bbe741')
+      end
+
+      it 'prints all the tasks' do
+        output = capture(:stdout) { subject }
+
+        JSON.parse(output).should have(3).tasks
       end
     end
   end

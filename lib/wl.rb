@@ -5,4 +5,5 @@ module Wl
   autoload :CLI,    'wl/cli'
   autoload :Dotwl,  'wl/dotwl'
   autoload :Login,  'wl/login'
+  autoload :Task,   'wl/task'
 end

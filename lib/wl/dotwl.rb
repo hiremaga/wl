@@ -9,6 +9,10 @@ module Wl
       FileUtils.mkdir_p("#{Dir.home}/.wl", mode: 0700).last
     end
 
+    def token
+      File.read(token_path) rescue nil
+    end
+
     private
     def token_path
       "#{dir}/token"
