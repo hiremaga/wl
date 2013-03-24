@@ -11,6 +11,15 @@ module Wl
       end
     end
 
+    describe 'login', vcr: {cassette_name: 'login'} do
+      let(:args) { %w"login --email fake@example.com --password fakepass" }
+
+      it 'retrieves a token on behalf of the user' do
+        output = capture(:stdout) { Wl::CLI.start(args) }
+        output.should include('"name":"fake@example.com"')
+      end
+    end
+
     def capture(stream)
       begin
         stream = stream.to_s
