@@ -30,7 +30,7 @@ module Wl
 
     describe '#login' do
       before do
-        fake_login = double(Login, token: 'faketoken')
+        fake_login = double(Models::Login, token: 'faketoken')
         subject.login(fake_login)
       end
 

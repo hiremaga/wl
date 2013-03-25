@@ -12,13 +12,13 @@ module Wl
       context 'when the email address and password are accepted', vcr: {cassette_name: 'login'} do
         it 'packages the api response in a Login object' do
           response = subject.login('fake@example.com', 'fakepass')
-          response.should be_a(Login)
+          response.should be_a(Models::Login)
           response.email.should == 'fake@example.com'
           response.errors.should be_nil
         end
 
         it 'stores the token' do
-          dotwl.should_receive(:login).with(an_instance_of(Login))
+          dotwl.should_receive(:login).with(an_instance_of(Models::Login))
           subject.login('fake@example.com', 'fakepass')
         end
       end
@@ -26,7 +26,7 @@ module Wl
       context 'when something goes wrong' do
         it 'inserts the errors into the Login object', vcr: {cassette_name: 'login'} do
           response = subject.login('fake@example.com', 'badpassword')
-          response.should be_a(Login)
+          response.should be_a(Models::Login)
           response.email.should be_nil
           response.errors['type'].should eq('not_found.no_such_user')
         end

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-module Wl
-  describe Task do
+module Wl::Models
+  describe Login do
     it { should be_an(APISmith::Smash) }
   end
 end

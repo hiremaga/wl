@@ -1,7 +1,8 @@
 require 'api_smith'
 
 module Wl
-  class List < APISmith::Smash
+  module Models
+    class List < APISmith::Smash
       property :title
       property :created_at
       property :updated_at
@@ -12,5 +13,6 @@ module Wl
       property :id
       property :owner_id
       property :errors
+    end
   end
 end

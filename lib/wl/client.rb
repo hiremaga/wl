@@ -9,17 +9,17 @@ module Wl
     shy :dotwl
 
     def login(email, password)
-      login = post('login', extra_query: {email: email, password: password}, transformer: Login)
+      login = post('login', extra_query: {email: email, password: password}, transformer: Models::Login)
       dotwl.login(login)
       login
     end
 
     def tasks
-      get('me/tasks', transformer: Task)
+      get('me/tasks', transformer: Models::Task)
     end
 
     def lists
-      get('me/lists', transformer: List)
+      get('me/lists', transformer: Models::List)
     end
 
     def base_request_options
