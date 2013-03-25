@@ -9,7 +9,9 @@ module Wl
     shy :dotwl
 
     def login(email, password)
-      post('login', extra_query: {email: email, password: password}, transformer: Login)
+      login = post('login', extra_query: {email: email, password: password}, transformer: Login)
+      dotwl.login(login)
+      login
     end
 
     def tasks

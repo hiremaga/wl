@@ -29,11 +29,6 @@ module Wl
         output.should include('"name":"fake@example.com"')
       end
 
-      it 'stores the token' do
-        dotwl.should_receive(:login).with(an_instance_of(Login))
-        capture(:stdout) { subject }
-      end
-
       context 'when an email and password are not provided' do
         let(:args) { %w"login" }
 

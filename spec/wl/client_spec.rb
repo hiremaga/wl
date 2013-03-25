@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module Wl
   describe Client do
-    let(:dotwl) { double(Dotwl, token: nil) }
+    let(:dotwl) { double(Dotwl, token: nil).as_null_object }
 
     subject do
       Client.new(dotwl: dotwl)
@@ -15,6 +15,11 @@ module Wl
           response.should be_a(Login)
           response.email.should == 'fake@example.com'
           response.errors.should be_nil
+        end
+
+        it 'stores the token' do
+          dotwl.should_receive(:login).with(an_instance_of(Login))
+          subject.login('fake@example.com', 'fakepass')
         end
       end
 

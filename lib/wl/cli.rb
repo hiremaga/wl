@@ -11,7 +11,6 @@ module Wl
       password = options[:password] || ui.ask('Wunderlist password: ') { |q| q.echo = '*' }
 
       login = client.login(email, password)
-      dotwl.login(login)
 
       say login.to_json
     end
@@ -23,11 +22,7 @@ module Wl
 
     private
     def client
-      @client ||= Wl::Client.new(dotwl: dotwl)
-    end
-
-    def dotwl
-      @dotwl ||= Dotwl.new
+      @client ||= Wl::Client.new(dotwl: Dotwl.new)
     end
 
     def ui
