@@ -2,4 +2,4 @@
 
 require 'wl'
 
-Wl::CLI.start
+Wl::CLI::Root.start

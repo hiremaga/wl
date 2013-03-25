@@ -5,7 +5,7 @@ module Wl
     let(:dotwl) { double(Dotwl, token: nil).as_null_object }
 
     subject do
-      Wl::CLI.start(args)
+      Wl::CLI::Root.start(args)
     end
 
     before do
@@ -21,8 +21,8 @@ module Wl
       end
     end
 
-    describe 'login', vcr: {cassette_name: 'login'} do
-      let(:args) { %w"login --email fake@example.com --password fakepass" }
+    describe 'auth login', vcr: {cassette_name: 'login'} do
+      let(:args) { %w"auth login --email fake@example.com --password fakepass" }
 
       it 'retrieves a token on behalf of the user' do
         output = capture(:stdout) { subject }
@@ -30,7 +30,7 @@ module Wl
       end
 
       context 'when an email and password are not provided' do
-        let(:args) { %w"login" }
+        let(:args) { %w"auth login" }
 
         it 'asks the user for each' do
           ui = mock(HighLine).as_null_object
