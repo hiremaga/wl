@@ -2,9 +2,11 @@ require 'shy'
 require 'api_smith'
 
 module Wl
-  class Client < Shy.new(:dotwl)
+  class Client
+    include Shy
     include APISmith::Client
     base_uri 'https://api.wunderlist.com/'
+    shy :dotwl
 
     def login(email, password)
       post('login', extra_query: {email: email, password: password}, transformer: Login)
