@@ -29,3 +29,8 @@ Or install it yourself as:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Acknowledgements
+
+This little side-project might not exist without bsmt's clever [reverse engineering of Wunderlist's API](http://bsmt.me/blog/2013/03/02/reverse-engineering-the-wunderlist-api/), 
+so thank you [@bsmt](https://github.com/bsmt). Of course this wouldn't be possible without Wunderlist itself, thanks [@6wunderkinder](https://github.com/6wunderkinder)!
