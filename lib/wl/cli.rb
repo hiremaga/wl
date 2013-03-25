@@ -20,6 +20,11 @@ module Wl
       say client.tasks.to_json
     end
 
+    desc 'lists', 'Lists all your lists'
+    def lists
+      say client.lists.to_json
+    end
+
     private
     def client
       @client ||= Wl::Client.new(dotwl: Dotwl.new)

@@ -1,0 +1,98 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wunderlist.com/me/lists?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 131378dbc2490bf87b6080ad6aeb758a46673270bbca9c7ea26f434473bbe741
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 25 Mar 2013 01:42:49 GMT
+      Etag:
+      - ! '"902626f7ad1045f6eda77cced7000115"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-6w-Client-Status:
+      - unknown
+      X-6w-Timestamp:
+      - '1364175769'
+      X-Rack-Cache:
+      - miss
+      X-Ratelimit-Delay-Hard:
+      - '0'
+      X-Ratelimit-Delay-Soft:
+      - '840'
+      X-Request-Id:
+      - ce14d77649bb5889ee4638a164a3a824
+      X-Server:
+      - ip-10-226-39-240
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":"ABIdAARgVkA","created_at":"2013-03-24T07:29:40Z","updated_at":"2013-03-24T07:29:40Z","title":"Private","local_identifier":"localId:prepopulated:AAIdAABMQ6I:List:private","version":1,"type":"List","owner_id":"AAIdAABMQ6I","position":8.0e-05},{"id":"ABIdAARgVkI","created_at":"2013-03-24T07:29:40Z","updated_at":"2013-03-24T07:29:40Z","title":"Work","local_identifier":"localId:prepopulated:AAIdAABMQ6I:List:work","version":1,"type":"List","owner_id":"AAIdAABMQ6I","position":10.0},{"id":"ABIdAARgVkM","created_at":"2013-03-24T07:29:40Z","updated_at":"2013-03-24T07:29:40Z","title":"Shopping","local_identifier":"localId:prepopulated:AAIdAABMQ6I:List:shopping","version":1,"type":"List","owner_id":"AAIdAABMQ6I","position":20.00002},{"id":"ABIdAARgVkQ","created_at":"2013-03-24T07:29:40Z","updated_at":"2013-03-24T07:29:40Z","title":"Movies
+        to Watch","local_identifier":"localId:prepopulated:AAIdAABMQ6I:List:movies","version":1,"type":"List","owner_id":"AAIdAABMQ6I","position":29.99998},{"id":"ABIdAARgVkU","created_at":"2013-03-24T07:29:40Z","updated_at":"2013-03-24T07:29:40Z","title":"Wishlist","local_identifier":"localId:prepopulated:AAIdAABMQ6I:List:wishlist","version":1,"type":"List","owner_id":"AAIdAABMQ6I","position":39.99992}]'
+    http_version: 
+  recorded_at: Mon, 25 Mar 2013 01:42:53 GMT
+- request:
+    method: get
+    uri: https://api.wunderlist.com/me/lists?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 25 Mar 2013 01:45:28 GMT
+      Server:
+      - nginx
+      Status:
+      - 401 Unauthorized
+      X-6w-Client-Status:
+      - unknown
+      X-6w-Timestamp:
+      - '1364175928'
+      X-Rack-Cache:
+      - miss
+      X-Ratelimit-Delay-Hard:
+      - '0'
+      X-Ratelimit-Delay-Soft:
+      - '893'
+      X-Request-Id:
+      - 91356407bc4e11c09b196c5665a3f43a
+      Content-Length:
+      - '85'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"errors":{"message":"You must be authenticated to continue.","type":"unauthorized"}}'
+    http_version: 
+  recorded_at: Mon, 25 Mar 2013 01:45:31 GMT
+recorded_with: VCR 2.4.0

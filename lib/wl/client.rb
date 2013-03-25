@@ -18,6 +18,10 @@ module Wl
       get('me/tasks', transformer: Task)
     end
 
+    def lists
+      get('me/lists', transformer: List)
+    end
+
     def base_request_options
       if dotwl.token
         {

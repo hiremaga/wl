@@ -60,5 +60,19 @@ module Wl
         JSON.parse(output).should have(3).tasks
       end
     end
+
+    describe 'lists', vcr: {cassette_name: 'lists'} do
+      let(:args) { %w"lists" }
+
+      before do
+        dotwl.stub(token: '131378dbc2490bf87b6080ad6aeb758a46673270bbca9c7ea26f434473bbe741')
+      end
+
+      it 'prints all the tasks' do
+        output = capture(:stdout) { subject }
+
+        JSON.parse(output).should have(5).lists
+      end
+    end
   end
 end

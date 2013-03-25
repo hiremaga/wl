@@ -56,5 +56,25 @@ module Wl
         end
       end
     end
+
+    describe '#lists' do
+      context 'when the user has logged in', vcr: {cassette_name: 'lists'} do
+        before do
+          dotwl.stub(token: '131378dbc2490bf87b6080ad6aeb758a46673270bbca9c7ea26f434473bbe741')
+        end
+
+        it 'lists all lists' do
+          lists = subject.lists
+          lists.map(&:title).should eq ["Private", "Work", "Shopping", "Movies to Watch", "Wishlist"]
+        end
+      end
+
+      context 'when the user has not logged in', vcr: {cassette_name: 'lists'} do
+        it 'fails gracefully' do
+          lists = subject.lists
+          lists.errors['type'].should eq('unauthorized')
+        end
+      end
+    end
   end
 end
